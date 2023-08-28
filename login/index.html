@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>login</title>
+</head>
+
+<script>
+export default {
+  data() {
+    return {
+      isMenuOpen: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
+    navigate(route) {
+      this.$router.push(route);
+      this.isMenuOpen = false; // Fechar o menu após selecionar uma opção
+    },
+  },
+};
+</script>
+
+<body background="WhatsApp Image 2023-08-27 at 23.36.50.jpeg">
+    <header>
+    <div>
+
+      <nav id="navbar-example2" class="navbar  border-bottom border-warning  border-1 px-1 mb-3 fixed-top ">
+        <img src="WhatsApp Image 2023-08-27 at 23.24.35.jpeg" class="carrinho" alt="" style="max-width: 10%;">
+        <div class="menu">
+          <button class="menu-button" @click="toggleMenu">☰</button>
+      
+          <div class="dropdown-menu" :class="{ 'show': isMenuOpen }">
+            <button class="dropdown-item" @click="navigate('/whatsapplink')">Quem Somos</button>
+            <button class="dropdown-item" @click="navigate('/fleet')">Nossas Frotas</button>
+            <button class="dropdown-item" @click="navigate('/carousel')">Contato</button>
+          </div>
+        </div>
+        <div>
+    </div>
+        </nav>
+        
+    </div>
+    
+  </header>
+
+  <main>
+<div class="formulario">
+<form>
+
+    <h1>Log-in:</h1>
+
+    <label class="label_username">username</label>
+    <br>
+    <input class="username" type="text">
+    <br>
+    <label class="label_senha">senha</label>
+    <br>
+    <input class="senha" type="password">
+    <br>
+    <button class="entrar">Entrar</button>
+
+    <p>Ainda não tem cadastro? <a href="">Cadastre-se!</a></p>
+
+</form>
+</div>
+</main>
+</body>
+
+<style>
+
+.a {
+    color:#ffc107
+}
+
+.entrar {
+    border: 0px;
+    margin-right: 14%;
+    margin-top: 10px;
+    border-radius: 11px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.label_username {
+    margin-right: 18%;
+}
+
+.label_senha {
+    margin-right: 24%;
+}
+
+.username, .senha {
+    border-radius: 11px;
+    border: 0px;
+}
+
+.formulario {
+    text-align: center;
+}
+
+form {
+    background-color: #231f1e;
+    margin-top: 30%;
+    margin-left: 30%;
+    margin-right: 30%;
+    color: white;
+    border-radius: 35px;
+    border-color: #ffc107;
+    border-style: groove;
+}
+
+h1 {
+    text-align: center;
+padding-top: 10opx;
+margin-top: 5%;
+color: white;
+}
+
+    .menu-button {
+  background: none;
+  border: none;
+  font-size: 5vh;
+  cursor: pointer;
+  color: white;
+  margin-left: 13%;
+  margin-top: 15%;
+}
+
+   .btn-outline-warning{
+background-color: #231f1e;
+color: white;
+
+    }
+    #navbar-example2 {
+  height: 13vh;
+  margin-top: 0px;
+  background-image: url(WhatsApp\ Image\ 2023-08-27\ at\ 23.24.35\ \(1\).jpeg);
+  background-size: 130vh;
+}
+
+.nav-pills {
+  margin-right: 2%;
+  margin-top: 1%;
+}
+
+.carrinho {
+  padding-top: 0.85%;
+  margin-left: 5.7%;
+  position: absolute;
+  background-color: #231f1e;
+  height: 11vh;
+}
+</style>
+
+</html>
